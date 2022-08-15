@@ -50,10 +50,10 @@ public class Runner {
         for (int i = 0; i < array_num.length; i++){
             if(array_num[i] % 2 ==0){
                 even.add(array_num[i]);
-                System.out.println(even);
+//                System.out.println(even);
             }
         }
-
+        System.out.println(even);
 //        2. Print the difference between the largest and smallest value
         int max = array_num[0];
         int min = array_num[0];
