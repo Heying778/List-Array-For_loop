@@ -1,6 +1,7 @@
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
+import java.util.stream.IntStream;
 
 public class Runner {
 
@@ -45,16 +46,15 @@ public class Runner {
 
 //        1. Print out a list of the even integers
         int[] array_num = {1, 1, 4, 2, 7, 1, 6, 15, 13, 99, 7};
+        List<Integer> even = new ArrayList<>();
         for (int i = 0; i < array_num.length; i++){
             if(array_num[i] % 2 ==0){
-                System.out.println(array_num[i]);
+                even.add(array_num[i]);
+                System.out.println(even);
             }
         }
 
-
-
 //        2. Print the difference between the largest and smallest value
-
         int max = array_num[0];
         int min = array_num[0];
         for(int i = 1; i < array_num.length;i++){
@@ -64,9 +64,12 @@ public class Runner {
                 min = array_num[i];
             }
         }
-        System.out.println("Difference between larges and smallest is " + (max-min));
+        System.out.println("Difference between largest and smallest is " + (max-min));
 //        3. Print True if the list contains a 1 next to a 1 somewhere.
+
 //        4. Print the sum of the numbers,
+        int sum = IntStream.of(array_num).sum();
+        System.out.println(sum);
 //        5. Print the sum of the numbers...
 //           ...except the number 13 is unlucky, so it does not count...
 //           ...and numbers that come immediately after a 13 also do not count.
