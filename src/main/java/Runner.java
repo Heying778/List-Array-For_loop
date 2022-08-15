@@ -57,7 +57,7 @@ public class Runner {
 //        2. Print the difference between the largest and smallest value
         int max = array_num[0];
         int min = array_num[0];
-        for(int i = 1; i < array_num.length;i++){
+        for(int i = 0; i < array_num.length;i++){
             if(array_num[i] > max)
                 max = array_num[i];
             else if (array_num[i]< min) {
@@ -66,7 +66,10 @@ public class Runner {
         }
         System.out.println("Difference between largest and smallest is " + (max-min));
 //        3. Print True if the list contains a 1 next to a 1 somewhere.
-
+        for (int i = 0; i < array_num.length; i++){
+            if (array_num[i] == array_num[i++]);
+        }
+        System.out.println("True");
 //        4. Print the sum of the numbers,
         int sum = IntStream.of(array_num).sum();
         System.out.println(sum);
