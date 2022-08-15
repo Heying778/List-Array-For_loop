@@ -18,9 +18,9 @@ public class Runner {
 //        1. Add "Coll" to the end of the list
         scottishIslands.add("COll");
 //        2. Add "Tiree" to the start of the list
-        scottishIslands.add(0,"Tiree");
+        scottishIslands.add(0, "Tiree");
 //        3. Add "Islay" after "Jura" and before "Mull"
-        scottishIslands.add(2,"Islay");
+        scottishIslands.add(2, "Islay");
 //        4. Print out the index position of "Skye"
         System.out.println(scottishIslands.indexOf("Skye"));
 //        5. Remove "Tresco" from the list by name
@@ -32,7 +32,7 @@ public class Runner {
 //        8. Sort the list alphabetically
         Collections.sort(scottishIslands);
 //        9. Print out all the islands using a for loop
-        for(String name:scottishIslands){
+        for (String name : scottishIslands) {
             System.out.println(name);
         }
 
@@ -47,8 +47,8 @@ public class Runner {
 //        1. Print out a list of the even integers
         int[] array_num = {1, 1, 4, 2, 7, 1, 6, 15, 13, 99, 7};
         List<Integer> even = new ArrayList<>();
-        for (int i = 0; i < array_num.length; i++){
-            if(array_num[i] % 2 ==0){
+        for (int i = 0; i < array_num.length; i++) {
+            if (array_num[i] % 2 == 0) {
                 even.add(array_num[i]);
 //                System.out.println(even);
             }
@@ -57,17 +57,17 @@ public class Runner {
 //        2. Print the difference between the largest and smallest value
         int max = array_num[0];
         int min = array_num[0];
-        for(int i = 0; i < array_num.length;i++){
-            if(array_num[i] > max)
+        for (int i = 0; i < array_num.length; i++) {
+            if (array_num[i] > max)
                 max = array_num[i];
-            else if (array_num[i]< min) {
+            else if (array_num[i] < min) {
                 min = array_num[i];
             }
         }
-        System.out.println("Difference between largest and smallest is " + (max-min));
+        System.out.println("Difference between largest and smallest is " + (max - min));
 //        3. Print True if the list contains a 1 next to a 1 somewhere.
-        for (int i = 0; i < array_num.length; i++){
-            if (array_num[i] == array_num[i++]);
+        for (int i = 0; i < array_num.length; i++) {
+            if (array_num[i] == 1 && array_num[i] == array_num[i++]) ;
         }
         System.out.println("True");
 //        4. Print the sum of the numbers,
@@ -78,7 +78,16 @@ public class Runner {
 //           ...and numbers that come immediately after a 13 also do not count.
 //
 //          So [7, 13, 2] would have sum of 7.
-
+        int ans = 0;
+        for (int i = 0; i < array_num.length; i++) {
+            if (i != 0) {
+                if (array_num[i] == 13) {
+                    int unlucky = array_num[i] + array_num[i + 1];
+                    ans = sum - unlucky;
+                }
+            }
+        }
+        System.out.println(ans);
     }
 
 }
