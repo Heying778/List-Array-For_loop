@@ -44,14 +44,34 @@ public class Runner {
         System.out.println("numbers: " + numbers);
 
 //        1. Print out a list of the even integers
+        int[] array_num = {1, 1, 4, 2, 7, 1, 6, 15, 13, 99, 7};
+        for (int i = 0; i < array_num.length; i++){
+            if(array_num[i] % 2 ==0){
+                System.out.println(array_num[i]);
+            }
+        }
+
+
+
 //        2. Print the difference between the largest and smallest value
+
+        int max = array_num[0];
+        int min = array_num[0];
+        for(int i = 1; i < array_num.length;i++){
+            if(array_num[i] > max)
+                max = array_num[i];
+            else if (array_num[i]< min) {
+                min = array_num[i];
+            }
+        }
+        System.out.println("Difference between larges and smallest is " + (max-min));
 //        3. Print True if the list contains a 1 next to a 1 somewhere.
 //        4. Print the sum of the numbers,
 //        5. Print the sum of the numbers...
 //           ...except the number 13 is unlucky, so it does not count...
 //           ...and numbers that come immediately after a 13 also do not count.
 //
-//          So [7, 13, 2] would have sum of 9.
+//          So [7, 13, 2] would have sum of 7.
 
     }
 
