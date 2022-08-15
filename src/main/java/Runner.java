@@ -31,6 +31,9 @@ public class Runner {
 //        8. Sort the list alphabetically
         Collections.sort(scottishIslands);
 //        9. Print out all the islands using a for loop
+        for(String name:scottishIslands){
+            System.out.println(name);
+        }
 
         System.out.println(scottishIslands);
 
